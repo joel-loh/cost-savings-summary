@@ -14,3 +14,17 @@ The Gmail MCP server (providing `search_threads`, `get_thread`, `list_labels`) w
 
 **Action required:** Verify that the Gmail MCP connector is properly configured and authorised for this scheduled agent session before the next run.
 
+---
+
+## 2026-06-19T02:19:55Z run (window: 2026-06-19T00:00:00Z to 2026-06-19T02:19:55Z)
+
+**Status: Gmail connector unavailable — no emails could be fetched.**
+
+The Gmail MCP server (`search_threads`, `get_thread`, `list_labels`) was not available in this execution environment for the second consecutive run. No emails from alex.lew@whitecoat.global could be retrieved or summarised for this window.
+
+Additionally, the `PushNotification` / `mcp__claude-code-remote` tool was not available, so no phone/email alert could be dispatched.
+
+**Summary:** No new cost-savings directives, decisions, or action items from Alex Lew can be reported. This is a connector availability issue, not a signal that nothing was sent.
+
+**Action required (persistent):** The Gmail MCP connector must be properly configured and authorised for this scheduled agent session. Until resolved, daily cost-savings summaries cannot be produced. Please check the environment's MCP server configuration at https://code.claude.com/docs/en/claude-code-on-the-web.
+
