@@ -28,3 +28,18 @@ Additionally, the `PushNotification` / `mcp__claude-code-remote` tool was not av
 
 **Action required (persistent):** The Gmail MCP connector must be properly configured and authorised for this scheduled agent session. Until resolved, daily cost-savings summaries cannot be produced. Please check the environment's MCP server configuration at https://code.claude.com/docs/en/claude-code-on-the-web.
 
+---
+
+## 2026-07-01T00:06:00Z run (window: 2026-06-19T02:19:55Z to 2026-07-01T00:06:00Z)
+
+**Status: Gmail connector unavailable — no emails could be fetched.**
+
+The Gmail MCP server (`search_threads`, `get_thread`, `list_labels`) was not available in this execution environment for the third consecutive run. No emails from alex.lew@whitecoat.global could be retrieved or summarised for this window (covering 2026-06-19 through 2026-07-01).
+
+Only the GitHub MCP server was connected in this session. There is no Gmail integration available.
+
+**Summary:** No new cost-savings directives, decisions, or action items from Alex Lew can be reported for this period. This remains a connector availability issue — not an indication that no emails were sent.
+
+**Action required (persistent):** The Gmail MCP connector must be properly configured and authorised for this scheduled agent session. This is the third consecutive daily run without Gmail access. Until resolved, daily cost-savings summaries cannot be produced. Please check the environment's MCP server configuration at https://code.claude.com/docs/en/claude-code-on-the-web and verify the Gmail integration is enabled.
+
+
