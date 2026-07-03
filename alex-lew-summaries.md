@@ -28,3 +28,17 @@ Additionally, the `PushNotification` / `mcp__claude-code-remote` tool was not av
 
 **Action required (persistent):** The Gmail MCP connector must be properly configured and authorised for this scheduled agent session. Until resolved, daily cost-savings summaries cannot be produced. Please check the environment's MCP server configuration at https://code.claude.com/docs/en/claude-code-on-the-web.
 
+---
+
+## 2026-07-03T00:00:00Z run (window: 2026-06-19T02:19:55Z to 2026-07-03T00:00:00Z)
+
+**Status: Gmail connector installed but not enabled in chat — no emails could be fetched (3rd consecutive run).**
+
+`ListConnectors` confirms the Gmail connector is installed (`installedServerId: bbadc933-7623-4b8d-8814-597d2c9be732`) but `enabledInChat: false`, meaning its tools (`search_threads`, `get_thread`, `list_labels`) are not loaded in this scheduled session. No emails from alex.lew@whitecoat.global could be retrieved or summarised for the window covering 2026-06-19 to 2026-07-03 (~13 days).
+
+**Root cause identified:** The Gmail connector is authenticated at the org level but is toggled **off** for this chat/session. It must be explicitly enabled for the scheduled agent session in the connector settings.
+
+**Action required:** In the claude.ai interface, open this session's connector settings and toggle the Gmail connector **on**. Once enabled, `search_threads` and `get_thread` will be available and the daily summary will function. See: https://code.claude.com/docs/en/claude-code-on-the-web
+
+**Impact:** No cost-savings directives, decisions, or action items from Alex Lew have been captured for the past ~13 days. Any emails sent by Alex Lew during this period remain unreviewed by this agent.
+
